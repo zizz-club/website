@@ -4,27 +4,28 @@ A modern, responsive website with a dynamic Three.js background and modular comp
 
 ## Project Structure
 
-public/ 
-├── assets/ 
-│ ├── components/ # Reusable components (PHP files) 
-│ │ ├── navbar.php 
-│ │ ├── footer.php 
-│ │ ├── home.php 
-│ │ ├── about.php 
-│ │ ├── contact.php 
-│ ├── css/ # Stylesheets 
-│ │ ├── base.css 
-│ │ ├── navbar.css 
-│ │ ├── footer.css 
-│ │ ├── pages.css 
-│ │ ├── typography.css 
-│ ├── js/ # JavaScript files 
-│ │ ├── background.js 
-│ │ ├── components/ 
-│ │ │ ├── navbar.js 
-│ ├── images/ # Images and icons 
-│ │ ├── favicon.ico 
-├── index.php # Main entry point
+```public/  
+├── assets/  
+│ ├── components/           # Reusable components (PHP files)  
+│ │ ├── navbar.php  
+│ │ ├── footer.php  
+│ │ ├── home.php  
+│ │ ├── about.php  
+│ │ ├── contact.php  
+│ ├── css/ # Stylesheets  
+│ │ ├── base.css  
+│ │ ├── navbar.css  
+│ │ ├── footer.css  
+│ │ ├── pages.css  
+│ │ ├── typography.css  
+│ ├── js/                   # JavaScript files  
+│ │ ├── background.js  
+│ │ ├── components/  
+│ │ │ ├── navbar.js  
+│ ├── images/               # Images and icons  
+│ │ ├── favicon.ico  
+├── index.php               # Main entry point
+```
 
 ## Features
 
