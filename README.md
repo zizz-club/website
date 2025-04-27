@@ -4,8 +4,9 @@ A modern, responsive website with a dynamic Three.js background and modular comp
 
 ## Project Structure
 
-```public/  
-├── assets/  
+```
+public/
+├── assets/
 │ ├── components/           # Reusable components (PHP files)
 │ │ ├── navbar.php
 │ │ ├── footer.php
