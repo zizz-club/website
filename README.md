@@ -2,34 +2,6 @@
 
 A modern, responsive website with a dynamic Three.js background and modular components.
 
-## Project Structure
-
-```
-private/
-└── contact_submit.php
-public/
-├── assets/
-│ ├── components/           # Reusable components (PHP files)
-│ │ ├── navbar.php
-│ │ ├── footer.php
-│ │ ├── home.php
-│ │ ├── about.php
-│ │ ├── contact.php
-│ ├── css/ # Stylesheets
-│ │ ├── base.css
-│ │ ├── navbar.css
-│ │ ├── footer.css
-│ │ ├── pages.css
-│ │ ├── typography.css
-│ ├── js/                   # JavaScript files
-│ │ ├── background.js
-│ │ ├── components/
-│ │ │ ├── navbar.js
-│ ├── images/               # Images and icons
-│ │ ├── favicon.ico
-├── index.php               # Main entry point
-```
-
 ## Features
 
 - **Three.js Background**: A dynamic, animated background using Perlin noise.
