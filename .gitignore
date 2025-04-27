@@ -1,0 +1,21 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+
+# Ignore temporary files
+*.log
+*.tmp
+
+# Ignore node_modules (if using npm in the future)
+node_modules/
+
+# Ignore compiled files (if applicable)
+*.class
+*.pyc
+
+# Ignore environment files
+.env
