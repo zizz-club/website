@@ -5,6 +5,8 @@ A modern, responsive website with a dynamic Three.js background and modular comp
 ## Project Structure
 
 ```
+private/
+└── contact_submit.php
 public/
 ├── assets/
 │ ├── components/           # Reusable components (PHP files)

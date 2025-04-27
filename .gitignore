@@ -19,3 +19,6 @@ node_modules/
 
 # Ignore environment files
 .env
+
+# Ignore private files (if applicable)
+private/db_connection.php

@@ -12,6 +12,7 @@ html {
 }
 
 body {
+    font-family: var(--primary-font);
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -27,7 +28,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    animation: fadeIn 2s ease-in-out;
+    animation: fadeIn 2s ease-in-out forwards; /* Add 'forwards' to keep the final state */
     background: linear-gradient(135deg, #4da6ff, #1a1a1a); /* Example gradient */
 }
 
@@ -171,6 +172,53 @@ header .logo {
 
     header {
         top: 40%;
+    }
+
+    .navbar {
+        top: 10px; /* Adjust navbar position */
+        padding: 12px 12px; /* Reduce padding */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack links vertically */
+        gap: 8px; /* Reduce spacing between links */
+    }
+
+    .page {
+        padding: 10px; /* Reduce padding for smaller screens */
+        max-width: 90%; /* Use more of the screen width */
+    }
+
+    #page-wrapper {
+        padding: 10px; /* Reduce wrapper padding */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Adjust heading size */
+    }
+
+    p {
+        font-size: 0.9rem; /* Adjust paragraph size */
+    }
+}
+
+/* Responsive styles for tablets */
+@media (min-width: 768px) and (max-width: 1200px) {
+    .navbar {
+        top: 15px; /* Adjust navbar position */
+        padding: 14px 14px; /* Slightly reduce padding */
+    }
+
+    .page {
+        max-width: 80%; /* Adjust page width */
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Adjust heading size */
+    }
+
+    p {
+        font-size: 1rem; /* Adjust paragraph size */
     }
 }
 
