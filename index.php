@@ -23,5 +23,6 @@
         <?php include 'modules/navbar.php'; ?>
         <?php include 'pages/' . $page . '.php'; ?>
         <?php include 'assets/js/imports.php'; ?>
+        <?php include 'modules/footer.php'; ?>
     </body>
 </html>

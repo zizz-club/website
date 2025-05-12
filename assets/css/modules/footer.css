@@ -1,0 +1,24 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: var(--footer-height);
+    padding: calc(var(--footer-padding) / 2) calc(var(--footer-padding) * 2);
+    background: var(--footer-background);
+    backdrop-filter: blur(6px);
+    border-radius: 16px 16px 0 0;
+    position: fixed;
+    bottom: 0;
+    z-index: 90;
+    transition: height 0.5s ease-in-out;
+    position: absolute;
+    overflow: hidden;
+}
+
+footer:hover {
+    height: calc(var(--footer-height) * 2);
+}
+
+footer .content {
+    margin-top: calc(var(--footer-height) / 4);
+}

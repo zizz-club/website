@@ -6,9 +6,14 @@
     --font-color: rgb(255, 255, 255);
     --font-link-color: rgb(0, 196, 255);
     --font-link-hover-color: rgb(166, 255, 77);
+    --page-background: rgba(0, 0, 0, 0.5);
     --navbar-height: 48px;
     --navbar-margin: 16px;
     --navbar-padding: 16px;
-    --navbar-background: rgba(48, 48, 255, 0.3);
+    --navbar-background: rgba(0, 0, 0, 0.3);
     --navbar-total-height: calc(var(--navbar-height) + (var(--navbar-margin) * 2) + var(--navbar-padding));
+    --footer-height: 32px;
+    --footer-padding: 16px;
+    --footer-background: rgba(0, 0, 0, 0.3);
+    --footer-total-height: calc(var(--footer-height) + (var(--footer-padding) * 2));
 }

@@ -1,7 +1,8 @@
 .wrapper {
     width: 100%;
-    height: calc(100vh - var(--navbar-total-height));
+    height: calc(100vh - var(--navbar-total-height) + var(--footer-total-height));
     margin-top: var(--navbar-total-height);
+    margin-bottom: var(--footer-total-height);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,7 +18,7 @@
 .box {
     padding: 64px 128px;
     margin: 64px;
-    background: var(--navbar-background);
+    background: var(--page-background);
     backdrop-filter: blur(6px);
     border-radius: 16px;
 }
