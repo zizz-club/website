@@ -24,7 +24,6 @@ a {
 
 a:hover {
     color: var(--font-link-hover-color);
-    text-decoration: underline;
 }
 
 .wrapper {
@@ -42,7 +41,8 @@ a:hover {
 
 .wrapper .content {
     padding: 64px 128px;
+    margin: 64px;
     background: var(--navbar-background);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(6px);
     border-radius: 16px;
 }
