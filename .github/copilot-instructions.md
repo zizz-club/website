@@ -1,3 +1,3 @@
 ---
-mode: "agent"
+mode: 'agent'
 ---

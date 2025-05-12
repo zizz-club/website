@@ -1,8 +1,14 @@
 :root {
     --primary-color: rgb(77, 166, 255);
     --complimentary-color: rgb(255, 166, 77);
-    --background-gradient: linear-gradient(to right, rgb(11, 133, 255), rgb(77, 77, 255));
-    --font: --apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --background-gradient: linear-gradient(
+        to right,
+        rgb(11, 133, 255),
+        rgb(77, 77, 255)
+    );
+    --font: --apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol";
     --font-color: rgb(255, 255, 255);
     --font-link-color: rgb(0, 196, 255);
     --font-link-hover-color: rgb(166, 255, 77);
@@ -11,9 +17,16 @@
     --navbar-margin: 16px;
     --navbar-padding: 16px;
     --navbar-background: rgba(0, 0, 0, 0.3);
-    --navbar-total-height: calc(var(--navbar-height) + (var(--navbar-margin) * 2) + var(--navbar-padding));
+    --navbar-total-height: calc(
+        var(--navbar-height) + (var(--navbar-margin) * 2) +
+            var(--navbar-padding)
+    );
     --footer-height: 32px;
     --footer-padding: 16px;
     --footer-background: rgba(0, 0, 0, 0.3);
-    --footer-total-height: calc(var(--footer-height) + (var(--footer-padding) * 2));
+    --footer-total-height: calc(
+        var(--footer-height) + (var(--footer-padding) * 2)
+    );
+    --preloader-background: rgb(32, 32, 32);
+    --preloader-spinner-color: rgb(255, 255, 255);
 }
