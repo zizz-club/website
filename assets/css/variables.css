@@ -6,4 +6,6 @@
     --font-color: #ffffff;
     --font-link-color: #A6FF4D;
     --font-link-hover-color: #FF4DA6;
+    --navbar-height: 48px;
+    --navbar-background: rgba(0, 0, 255, 0.3);
 }
