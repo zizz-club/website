@@ -3,10 +3,11 @@
     height: var(--navbar-height);
     backdrop-filter: blur(6px);
     border-radius: 16px;
-    padding: 8px 16px;
-    margin: 16px;
+    padding: calc(var(--navbar-padding) / 2) var(--navbar-padding);
+    margin: var(--navbar-margin);
     position: fixed;
     top: 0;
+    z-index: 100;
 }
 
 #navbar ul {
