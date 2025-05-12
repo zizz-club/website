@@ -1,7 +1,8 @@
 .wrapper {
     width: 100%;
-    height: calc(100vh - var(--navbar-total-height));
+    height: calc(100vh - var(--navbar-total-height) - var(--footer-total-height));
     margin-top: var(--navbar-total-height);
+    margin-bottom: var(--footer-total-height);
     display: flex;
     flex-direction: column;
     align-items: center;

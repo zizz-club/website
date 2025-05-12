@@ -19,6 +19,7 @@
         <link rel="apple-touch-icon" href="<?php echo $favicon; ?>" type="image/x-icon">
     </head>
     <body>
+        <?php include 'modules/preloader.php'; ?>
         <div id="threejs-container"></div>
         <?php include 'modules/navbar.php'; ?>
         <?php include 'pages/' . $page . '.php'; ?>
