@@ -1,8 +1,8 @@
-# zizz.club PHP Project
+# zizz.club website
 
 ## Overview
 
-The zizz.club PHP project is a web application built using PHP, HTML, CSS, and JavaScript. It is designed to provide a modular and scalable structure for building dynamic websites.
+The zizz.club website is a web application built using PHP, HTML, CSS, and JavaScript. It is designed to provide a modular and scalable structure for building dynamic websites.
 
 ### Key Directories
 
