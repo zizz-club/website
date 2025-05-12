@@ -12,7 +12,7 @@
                 <h1>zizz.club</h1>
                 <p>Welcome to zizz.club.</p>
                 <p>We are currently working on the site. Stay tuned for updates!</p>
-                <p>In the meantime, feel free check the owners site <a id="link" href="https://grej.xyz">@grej.xyz</a></p>
+                <p>In the meantime, feel free check the owners site <a href="https://grej.xyz">@grej.xyz</a></p>
         </div>
         <?php include 'assets/js/imports.php'; ?>
     </body>

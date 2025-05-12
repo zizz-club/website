@@ -16,13 +16,13 @@ body {
     text-align: center;
 }
 
-#link {
+a {
     color: var(--font-link-color);
     text-decoration: none;
     font-weight: bold;
 }
 
-#link:hover {
+a:hover {
     color: var(--font-link-hover-color);
     text-decoration: underline;
 }
