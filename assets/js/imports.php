@@ -5,3 +5,4 @@
 <script src="assets/js/modules/background.js"></script>
 <script src="assets/js/modules/navigation.js"></script>
 <script src="assets/js/modules/preloader.js"></script>
+<script src="assets/js/main.js"></script>
