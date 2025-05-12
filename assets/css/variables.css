@@ -1,0 +1,9 @@
+:root {
+    --primary-color: #4da6ff;
+    --complimentary-color: #FFA64D;
+    --background-gradient: linear-gradient(to right, #0B85FF, #4D4DFF);
+    --font: --apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --font-color: #ffffff;
+    --font-link-color: #A6FF4D;
+    --font-link-hover-color: #FF4DA6;
+}
