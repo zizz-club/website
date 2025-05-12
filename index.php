@@ -5,7 +5,7 @@
     if (!in_array($page, $valid_pages)) {
         $page = $default_page;
     }
-    $title = 'zizz.club | ' . ucfirst($page);
+    $title = 'zizz.club - ' . ucfirst($page);
     $favicon = 'assets/img/favicon.ico';
 ?>
 
