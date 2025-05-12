@@ -5,40 +5,32 @@ const noise = new SimplexNoise(); // Initialize the noise generator
 
 // Configurable variables
 const CONFIG = {
-    planeWidth: 300, // Width of the plane
-    planeHeight: 300, // Height of the plane
+    planeWidth: 400, // Width of the plane
+    planeHeight: 200, // Height of the plane
     planeSegments: 300, // Number of segments for the plane geometry
     contourSpacing: 1.4, // Spacing between contour lines
     lineColor: 0x4da6ff, // Soft blue color for the contour lines
     lineThickness: 0.02, // Thickness of the contour lines
-    cameraPosition: { x: 0, y: 200, z: 0 }, // Camera position for top-down view
+    cameraPosition: { x: 0, y: 125, z: 0 }, // Camera position for top-down view
     backgroundColor: 0x2e2e2e, // Light gray background color
     backgroundAlpha: true, // Enable or disable transparency
     noiseSpeed: 0.0005, // Speed of the noise evolution
     heightAmplitude: 4, // Amplitude of the heightmap
     noiseScaleX: 0.015, // Scale of the noise on the X axis
-    noiseScaleY: 0.015, // Scale of the noise on the Y axis
-    horizontalFOV: 75, // Default FOV for horizontal scaling
-    verticalFOV: 75, // Default FOV for vertical scaling
-    adjustFOV: true, // Enable or disable FOV adjustment
+    noiseScaleY: 0.015 // Scale of the noise on the Y axis
 };
 
 // Select the container where the background will be rendered
-const container = document.getElementById("threejs-container");
+const container = document.getElementById('threejs-container');
 
 // Create a Three.js scene
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(
-    75,
-    container.offsetWidth / container.offsetHeight,
-    0.1,
-    1000
-);
+const camera = new THREE.PerspectiveCamera(75, container.offsetWidth / container.offsetHeight, 0.1, 1000);
 
 // Create a Three.js renderer with configurable alpha
 const renderer = new THREE.WebGLRenderer({
     antialias: true,
-    alpha: CONFIG.backgroundAlpha, // Use the configurable alpha setting
+    alpha: CONFIG.backgroundAlpha // Use the configurable alpha setting
 });
 renderer.setSize(container.offsetWidth, container.offsetHeight);
 renderer.setPixelRatio(window.devicePixelRatio);
@@ -47,43 +39,23 @@ container.appendChild(renderer.domElement);
 // Resize the renderer and camera on window resize
 function resizeRenderer() {
     renderer.setSize(container.offsetWidth, container.offsetHeight);
-
-    // Adjust the camera's aspect ratio dynamically
-    const aspectRatio = container.offsetWidth / container.offsetHeight;
-    camera.aspect = aspectRatio;
-
-    // Dynamically adjust the camera's FOV based on configuration
-    if (CONFIG.adjustFOV) {
-        if (aspectRatio > 1) {
-            // Wider than tall
-            camera.fov = CONFIG.horizontalFOV / aspectRatio; // Use horizontal FOV
-        } else {
-            // Taller than wide
-            camera.fov = CONFIG.verticalFOV * aspectRatio; // Use vertical FOV
-        }
-    }
-
+    camera.aspect = container.offsetWidth / container.offsetHeight;
     camera.updateProjectionMatrix();
 }
-window.addEventListener("resize", resizeRenderer);
+window.addEventListener('resize', resizeRenderer);
 
 // Call resizeRenderer initially to set up the correct aspect ratio
 resizeRenderer();
 
 // Create a plane geometry for the terrain
-const geometry = new THREE.PlaneGeometry(
-    CONFIG.planeWidth,
-    CONFIG.planeHeight,
-    CONFIG.planeSegments,
-    CONFIG.planeSegments
-);
+const geometry = new THREE.PlaneGeometry(CONFIG.planeWidth, CONFIG.planeHeight, CONFIG.planeSegments, CONFIG.planeSegments);
 
 // Material for the contour lines
 const contourMaterial = new THREE.ShaderMaterial({
     uniforms: {
         elevation: { value: geometry.attributes.position.array },
         contourSpacing: { value: CONFIG.contourSpacing }, // Spacing between contour lines
-        lineColor: { value: new THREE.Color(CONFIG.lineColor) }, // Contour line color
+        lineColor: { value: new THREE.Color(CONFIG.lineColor) } // Contour line color
     },
     vertexShader: `
         varying float vElevation;
@@ -106,7 +78,7 @@ const contourMaterial = new THREE.ShaderMaterial({
             }
         }
     `,
-    transparent: true, // Allow transparency for non-line areas
+    transparent: true // Allow transparency for non-line areas
 });
 
 // Create the contour mesh
@@ -155,11 +127,7 @@ function animate() {
 }
 
 // Set up the camera position for a top-down view
-camera.position.set(
-    CONFIG.cameraPosition.x,
-    CONFIG.cameraPosition.y,
-    CONFIG.cameraPosition.z
-); // Directly above the plane
+camera.position.set(CONFIG.cameraPosition.x, CONFIG.cameraPosition.y, CONFIG.cameraPosition.z); // Directly above the plane
 camera.lookAt(0, 0, 0); // Point the camera at the center of the plane
 camera.up.set(0, 0, -1); // Adjust the "up" direction to ensure proper orientation
 

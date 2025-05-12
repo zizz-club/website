@@ -1,16 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const links = document.querySelectorAll("#navbar a");
+    const links = document.querySelectorAll("#navbar a[data-page]");
 
     links.forEach((link) => {
         link.addEventListener("click", (event) => {
-            const page = link.getAttribute("data-page");
-
-            // Allow default behavior for external links
-            if (!page) {
-                return;
-            }
-
             event.preventDefault();
+            const page = link.getAttribute("data-page");
 
             fetch(`pages/${page}.php`)
                 .then((response) => {
@@ -22,15 +16,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 .then((html) => {
                     // Replace the main content area dynamically
                     const parser = new DOMParser();
-                    const newDocument = parser.parseFromString(
-                        html,
-                        "text/html"
-                    );
+                    const newDocument = parser.parseFromString(html, "text/html");
                     const newContent = newDocument.querySelector(".wrapper");
 
                     if (newContent) {
-                        const currentContent =
-                            document.querySelector(".wrapper");
+                        const currentContent = document.querySelector(".wrapper");
                         if (currentContent) {
                             currentContent.replaceWith(newContent);
                         }
@@ -50,15 +40,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 .then((response) => response.text())
                 .then((html) => {
                     const parser = new DOMParser();
-                    const newDocument = parser.parseFromString(
-                        html,
-                        "text/html"
-                    );
+                    const newDocument = parser.parseFromString(html, "text/html");
                     const newContent = newDocument.querySelector(".wrapper");
 
                     if (newContent) {
-                        const currentContent =
-                            document.querySelector(".wrapper");
+                        const currentContent = document.querySelector(".wrapper");
                         if (currentContent) {
                             currentContent.replaceWith(newContent);
                         }

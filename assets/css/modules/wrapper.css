@@ -1,24 +1,17 @@
 .wrapper {
     width: 100%;
-    height: calc(100vh - var(--navbar-total-height) + var(--footer-total-height));
+    height: calc(100vh - var(--navbar-total-height));
     margin-top: var(--navbar-total-height);
-    margin-bottom: var(--footer-total-height);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.wrapper.fade-out {
-    opacity: 0;
 }
 
 .box {
     padding: 64px 128px;
     margin: 64px;
-    background: var(--page-background);
+    background: var(--navbar-background);
     backdrop-filter: blur(6px);
     border-radius: 16px;
 }
