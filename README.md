@@ -10,7 +10,7 @@ The zizz.club website is a web application built using PHP, HTML, CSS, and JavaS
   - **css/**: Stylesheets for the application.
   - **img/**: Images and icons.
   - **js/**: JavaScript files for dynamic functionality.
-- **modules/**: Reusable PHP components like the footer and navbar.
+- **modules/**: Reusable PHP components like the navbar.
 - **pages/**: Individual pages of the website, such as [`about.php`](pages/about.php) and [`home.php`](pages/home.php).
 
 ## License

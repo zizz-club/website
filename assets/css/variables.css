@@ -21,12 +21,6 @@
         var(--navbar-height) + (var(--navbar-margin) * 2) +
             var(--navbar-padding)
     );
-    --footer-height: 32px;
-    --footer-padding: 16px;
-    --footer-background: rgba(0, 0, 0, 0.3);
-    --footer-total-height: calc(
-        var(--footer-height) + (var(--footer-padding) * 2)
-    );
     --preloader-background: rgb(32, 32, 32);
     --preloader-spinner-color: rgb(255, 255, 255);
 }
